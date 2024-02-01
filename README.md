@@ -1,16 +1,9 @@
-### Meu Website
+### Dashbord UI - Tailwind CSS
 
-Este é meu futuro website/portfolio.
+Este é projeto criado a partir de um template do Figma. 
+Construído com Tailwind CSS totalmente responsivo.
 
-E essas são as features que serão desenvolvidas:
-
-[ ] - Dark Mode
-[ ] - Estrutura da página "Sobre Mim"
-[ ] - Estrutura da página "Meus Projetos"
-[ ] - Estrutura da página "Blog"
-[ ] - Integração com a API do Github
-[ ] - Newsletter
-[ ] - Criar blog com mdx
+Projeto Figma: [https://www.figma.com/file/MU3H8HfTxX32ukt8ANpan7/Ignite-Tailwind?type=design&node-id=0-1&mode=design&t=rD88S46f7LJDmmxt-0] by Rocketseat
 
 
 Live at: em breve...
