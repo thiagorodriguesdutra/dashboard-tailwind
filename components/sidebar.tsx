@@ -62,14 +62,10 @@ export default function Sidebar() {
   }
 
   return (
-    <div className="flex w-full max-w-80 flex-col justify-between border-r-2 border-r-slate-200 px-4 py-8">
+    <div className="h-full max-w-80 border-r-2 border-r-slate-200 px-4 py-8">
       <div className="">
-        <div className="">
-          <Header />
-        </div>
-        <div className="">
-          <Search />
-        </div>
+        <Header />
+        <Search />
         <nav className="">
           <div className="flex flex-col gap-3">
             {firstSection.map((link, index) => {
@@ -78,7 +74,7 @@ export default function Sidebar() {
                 <Link
                   key={index}
                   href={link.href}
-                  className={`${linkIsSelected ? 'bg-violet-50' : ''}  flex justify-between rounded-md p-3`}
+                  className={`${linkIsSelected ? 'bg-violet-50' : ''}  flex justify-between rounded-lg p-2`}
                   onClick={() => HandleLinkSelected(link.href)}
                 >
                   <div className="inline-flex gap-2">
@@ -94,29 +90,29 @@ export default function Sidebar() {
               )
             })}
           </div>
+          <div className="">
+            <div className="">
+              {secondSection.map((link, index) => {
+                const linkIsSelected = currentLink === link.href
+                return (
+                  <Link
+                    key={index}
+                    href={link.href}
+                    className={`${linkIsSelected ? 'bg-violet-50' : ''}  flex justify-between rounded-lg p-2`}
+                    onClick={() => HandleLinkSelected(link.href)}
+                  >
+                    <div className="inline-flex gap-2">
+                      {link.icon}
+                      <span className={linkIsSelected ? 'text-violet-700' : ''}>
+                        {link.title}
+                      </span>
+                    </div>
+                  </Link>
+                )
+              })}
+            </div>
+          </div>
         </nav>
-      </div>
-      <div>
-        <div className=" justify-self-end">
-          {secondSection.map((link, index) => {
-            const linkIsSelected = currentLink === link.href
-            return (
-              <Link
-                key={index}
-                href={link.href}
-                className={`${linkIsSelected ? 'bg-violet-50' : ''}  flex justify-between rounded-md p-3`}
-                onClick={() => HandleLinkSelected(link.href)}
-              >
-                <div className="inline-flex gap-2">
-                  {link.icon}
-                  <span className={linkIsSelected ? 'text-violet-700' : ''}>
-                    {link.title}
-                  </span>
-                </div>
-              </Link>
-            )
-          })}
-        </div>
       </div>
     </div>
   )
