@@ -2,12 +2,12 @@ import { UploadCloud } from 'lucide-react'
 
 export default function UploadInput() {
   return (
-    <div className="flex flex-1 items-center justify-center">
+    <div className="flex w-full items-center justify-center">
       <label
         htmlFor="dropzone-file"
-        className="flex h-32 w-full cursor-pointer flex-col items-center justify-center rounded-lg border"
+        className="w-full cursor-pointer flex-col items-center justify-center rounded-lg border"
       >
-        <div className="flex flex-col items-center justify-center pb-6 pt-5">
+        <div className="flex flex-col items-center justify-center p-6">
           <div className="flex size-10 items-center justify-center rounded-full bg-zinc-50">
             <UploadCloud className="rounded-full bg-zinc-100 p-1" />
           </div>

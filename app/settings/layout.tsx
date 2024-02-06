@@ -1,3 +1,4 @@
+import { ChevronDown } from 'lucide-react'
 import Navigation from './components/navigation'
 
 const navigationLinks = [
@@ -20,7 +21,14 @@ export default function SettingsLayout({
 }) {
   return (
     <section className="">
-      <Navigation links={navigationLinks} />
+      <h2 className="mt-5 text-xl font-semibold sm:text-2xl">Settings</h2>
+      <div className="mt-2 hidden lg:block">
+        <Navigation links={navigationLinks} />
+      </div>
+      <div className="mt-5 flex w-full justify-between rounded-lg border p-2 lg:hidden">
+        <div>My details</div>
+        <ChevronDown className="text-zinc-500" />
+      </div>
       {children}
     </section>
   )

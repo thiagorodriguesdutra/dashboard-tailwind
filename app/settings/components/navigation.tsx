@@ -14,7 +14,7 @@ interface NavigationProps {
 }
 
 export default function Navigation(props: NavigationProps) {
-  const [currentLink, setCurrentLink] = useState('/')
+  const [currentLink, setCurrentLink] = useState('/settings/details')
 
   function HandleLinkSelected(href: string) {
     setCurrentLink(href)
@@ -22,19 +22,19 @@ export default function Navigation(props: NavigationProps) {
 
   const { links } = props
   return (
-    <nav className="border-0.5 flex w-full gap-4 border-b">
+    <nav className="flex w-full gap-4 border-b">
       {links.map((link, index) => {
         const linkIsSelected = currentLink === link.href
         return (
           <Link
             key={index}
             href={link.href}
-            className={`${linkIsSelected ? 'border-b-2 border-violet-700 text-violet-700' : ''} py-2`}
+            className={`${linkIsSelected ? 'border-b-2 border-b-violet-700 text-violet-700' : ''} border-b-2 border-b-transparent py-2`}
             onClick={() => HandleLinkSelected(link.href)}
           >
             {link.label}
             <span
-              className={`${link.badge <= 0 ? 'hidden' : ''} text-xxs ml-1 rounded-2xl bg-zinc-100 px-2 py-0.5`}
+              className={`${link.badge <= 0 ? 'hidden' : ''} ml-1 rounded-2xl bg-zinc-100 px-2 py-0.5 text-xxs`}
             >
               {link.badge}
             </span>

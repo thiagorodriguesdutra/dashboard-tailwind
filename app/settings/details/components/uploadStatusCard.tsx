@@ -26,11 +26,11 @@ export default function UploadStatusCard() {
       {DATA.map((item, index) => (
         <div
           key={index}
-          className="mt-3 max-h-24 w-full rounded-lg border border-violet-500 px-6 pb-6 pt-2"
+          className="mt-3 w-full rounded-lg border border-violet-500 p-6"
         >
           <div className="flex w-full gap-3">
-            <div className="flex size-8 items-center justify-center rounded-full bg-violet-50">
-              <File size={16} />
+            <div className="flex size-8 items-center justify-center rounded-full bg-violet-50 p-2">
+              <File size={16} className="text-violet-500" />
             </div>
             <div className="flex w-full items-baseline justify-between">
               <div className="self-end">
@@ -45,7 +45,10 @@ export default function UploadStatusCard() {
                   className=" fill-violet-500 text-white"
                 />
               ) : (
-                <button onClick={(e) => e.preventDefault()}>
+                <button
+                  title="Stop downloading"
+                  onClick={(e) => e.preventDefault()}
+                >
                   <Trash2 size={20} />
                 </button>
               )}
